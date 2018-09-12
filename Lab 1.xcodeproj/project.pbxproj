@@ -17,6 +17,7 @@
 		18A3053C6C0FEE6B35E75076 /* Pods_Lab_1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AD2EBF74034E61BC5E75D8 /* Pods_Lab_1Tests.framework */; };
 		1AD7234FED90A478AD5BE718 /* Pods_Lab_1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1C75CC62B3B977E749DB07 /* Pods_Lab_1UITests.framework */; };
 		24A86957A795CA16F58075EF /* Pods_Lab_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221C47915569B8F021BEDD38 /* Pods_Lab_1.framework */; };
+		5AB92AB52148BDCB00A60E7A /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB92AB42148BDCB00A60E7A /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1AF3A097C5D8E200A757E7ED /* Pods-Lab 1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab 1Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab 1Tests/Pods-Lab 1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		221C47915569B8F021BEDD38 /* Pods_Lab_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3923DE9782A78ADA3838E03C /* Pods-Lab 1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab 1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lab 1Tests/Pods-Lab 1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5AB92AB42148BDCB00A60E7A /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		7C1C75CC62B3B977E749DB07 /* Pods_Lab_1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab_1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95538D8A57C1D682CE615653 /* Pods-Lab 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab 1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lab 1/Pods-Lab 1.debug.xcconfig"; sourceTree = "<group>"; };
 		AF87F171158B09D9B266A092 /* Pods-Lab 1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab 1UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab 1UITests/Pods-Lab 1UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,12 +116,13 @@
 		047D5BFB2142CC940089973E /* Lab 1 */ = {
 			isa = PBXGroup;
 			children = (
+				047D5C2A2142D98B0089973E /* PhotoViewController.swift */,
 				047D5BFC2142CC940089973E /* AppDelegate.swift */,
 				047D5C002142CC940089973E /* Main.storyboard */,
+				5AB92AB42148BDCB00A60E7A /* PhotoCell.swift */,
 				047D5C032142CC940089973E /* Assets.xcassets */,
 				047D5C052142CC940089973E /* LaunchScreen.storyboard */,
 				047D5C082142CC940089973E /* Info.plist */,
-				047D5C2A2142D98B0089973E /* PhotoViewController.swift */,
 			);
 			path = "Lab 1";
 			sourceTree = "<group>";
@@ -177,7 +180,6 @@
 				047D5BF62142CC940089973E /* Frameworks */,
 				047D5BF72142CC940089973E /* Resources */,
 				D4E77B9997DF62890A644A7C /* [CP] Embed Pods Frameworks */,
-				95A0A12A555EE0F2DB2C4BC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,8 +198,6 @@
 				047D5C092142CC940089973E /* Sources */,
 				047D5C0A2142CC940089973E /* Frameworks */,
 				047D5C0B2142CC940089973E /* Resources */,
-				3B378BF54E7ED6FA1EF33666 /* [CP] Embed Pods Frameworks */,
-				3DE28DF5CE15F2F83ECE655A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,8 +217,6 @@
 				047D5C142142CC940089973E /* Sources */,
 				047D5C152142CC940089973E /* Frameworks */,
 				047D5C162142CC940089973E /* Resources */,
-				4F6E8F905A46E5A8AFD937E5 /* [CP] Embed Pods Frameworks */,
-				6501543F737BF5226F778B25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,79 +302,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B378BF54E7ED6FA1EF33666 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab 1Tests/Pods-Lab 1Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3DE28DF5CE15F2F83ECE655A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab 1Tests/Pods-Lab 1Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F6E8F905A46E5A8AFD937E5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab 1UITests/Pods-Lab 1UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		536AC42ABC2F03AFA8BF1A9A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lab 1Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6501543F737BF5226F778B25 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab 1UITests/Pods-Lab 1UITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6DE21814F622F384AA15E8A2 /* [CP] Check Pods Manifest.lock */ = {
@@ -385,13 +326,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lab 1-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		91DB9340E37963EC64F33D6E /* [CP] Check Pods Manifest.lock */ = {
@@ -400,28 +344,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lab 1UITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		95A0A12A555EE0F2DB2C4BC2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab 1/Pods-Lab 1-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D4E77B9997DF62890A644A7C /* [CP] Embed Pods Frameworks */ = {
@@ -430,9 +362,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lab 1/Pods-Lab 1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -447,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047D5BFD2142CC940089973E /* AppDelegate.swift in Sources */,
+				5AB92AB52148BDCB00A60E7A /* PhotoCell.swift in Sources */,
 				047D5C2B2142D98B0089973E /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

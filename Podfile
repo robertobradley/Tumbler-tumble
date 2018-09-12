@@ -6,7 +6,8 @@ target 'Lab 1' do
   use_frameworks!
 
   # Pods for Lab 1
-    pod 'AlamofireImage'
+  pod 'Alamofire', '~> 4.4'
+  pod 'AlamofireImage', '~> 3.3'
 
   target 'Lab 1Tests' do
     inherit! :search_paths
