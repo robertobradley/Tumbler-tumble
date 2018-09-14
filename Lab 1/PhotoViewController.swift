@@ -61,6 +61,14 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
         return posts.count
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PhotoDetailsViewController
+        let cell = sender as! PhotoCell
+        //let indexPath = tableView.indexPath(for: cell)!
+        
+        vc.image = cell.photoImage.image
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoCell
         let post = posts[indexPath.row]
