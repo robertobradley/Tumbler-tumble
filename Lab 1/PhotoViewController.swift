@@ -11,6 +11,10 @@ import AlamofireImage
 
 class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     var posts: [[String: Any]] = []
     
     @IBOutlet weak var tableView: UITableView!
